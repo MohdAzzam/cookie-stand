@@ -7,7 +7,7 @@ let Seattle = {
   'shopName': 'Seattle',
   'minCustomer': 23,
   'maxCustomer': 65,
-  'avg': 6.3,
+  'averageCookies': 6.3,
   'hourlyCutomer': [],
   'customerPerHour': function () {
     for (let i = 0; i < workingHour.length; i++) {
@@ -18,8 +18,8 @@ let Seattle = {
   'cookiesPerHour': function () {
     let total = 0;
     for (let j = 0; j < workingHour.length; j++) {
-      this.cookiesPurchesd.push(workingHour[j] + '  ' + Math.floor(this.hourlyCutomer[j] * this.avg) + '  Cookies');
-      total += Math.floor(this.hourlyCutomer[j] * this.avg);
+      this.cookiesPurchesd.push(workingHour[j] + '  ' + Math.floor(this.hourlyCutomer[j] * this.averageCookies) + '  Cookies');
+      total += Math.floor(this.hourlyCutomer[j] * this.averageCookies);
     }
     return total;
   },
@@ -50,7 +50,7 @@ let Tokyo = {
   'shopName': 'Tokyo',
   'minCustomer': 3,
   'maxCustomer': 24,
-  'avg': 1.2,
+  'averageCookies': 1.2,
   'hourlyCutomer': [],
   'customerPerHour': function () {
     for (let i = 0; i < workingHour.length; i++) {
@@ -61,8 +61,8 @@ let Tokyo = {
   'cookiesPerHour': function () {
     let total = 0;
     for (let j = 0; j < workingHour.length; j++) {
-      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.avg) + ' Cookies');
-      total += Math.floor(this.hourlyCutomer[j] * this.avg);
+      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.averageCookies) + ' Cookies');
+      total += Math.floor(this.hourlyCutomer[j] * this.averageCookies);
     }
     return total;
   },
@@ -92,7 +92,7 @@ let Dubai = {
   'shopName': 'Dubai',
   'minCustomer': 11,
   'maxCustomer': 38,
-  'avg': 3.7,
+  'averageCookies': 3.7,
   'hourlyCutomer': [],
   'customerPerHour': function () {
     for (let i = 0; i < workingHour.length; i++) {
@@ -103,8 +103,8 @@ let Dubai = {
   'cookiesPerHour': function () {
     let total = 0;
     for (let j = 0; j < workingHour.length; j++) {
-      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.avg) + ' Cookies');
-      total += Math.floor(this.hourlyCutomer[j] * this.avg);
+      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.averageCookies) + ' Cookies');
+      total += Math.floor(this.hourlyCutomer[j] * this.averageCookies);
     }
     return total;
   },
@@ -135,7 +135,7 @@ let Paris = {
   'shopName': 'Paris',
   'minCustomer': 20,
   'maxCustomer': 38,
-  'avg': 2.3,
+  'averageCookies': 2.3,
   'hourlyCutomer': [],
   'customerPerHour': function () {
     for (let i = 0; i < workingHour.length; i++) {
@@ -146,8 +146,8 @@ let Paris = {
   'cookiesPerHour': function () {
     let total = 0;
     for (let j = 0; j < workingHour.length; j++) {
-      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.avg) + ' Cookies');
-      total += Math.floor(this.hourlyCutomer[j] * this.avg);
+      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.averageCookies) + ' Cookies');
+      total += Math.floor(this.hourlyCutomer[j] * this.averageCookies);
     }
     return total;
   },
@@ -179,7 +179,7 @@ let Lima = {
   'shopName': 'Lima',
   'minCustomer': 2,
   'maxCustomer': 16,
-  'avg': 4.6,
+  'averageCookies': 4.6,
   'hourlyCutomer': [],
   'customerPerHour': function () {
     for (let i = 0; i < workingHour.length; i++) {
@@ -190,8 +190,8 @@ let Lima = {
   'cookiesPerHour': function () {
     let total = 0;
     for (let j = 0; j < workingHour.length; j++) {
-      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.avg) + ' Cookies');
-      total += Math.floor(this.hourlyCutomer[j] * this.avg);
+      this.cookiesPurchesd.push(workingHour[j] + Math.floor(this.hourlyCutomer[j] * this.averageCookies) + ' Cookies');
+      total += Math.floor(this.hourlyCutomer[j] * this.averageCookies);
     }
     return total;
   },
