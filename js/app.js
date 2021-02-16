@@ -46,7 +46,7 @@ BranchShop.prototype.render = function () {
 };
 let tableHeader = function () {
   let divEl = document.getElementById('cookiesShop');
-  tableEl.className = 'table';
+  // tableEl.className = 'table';
   divEl.append(tableEl);
   let tableRow = document.createElement('tr');
   tableEl.appendChild(tableRow);
@@ -102,9 +102,4 @@ paris.render();
 
 let lima = new BranchShop('Lima', 2, 16, 4.6);
 lima.render();
-
-
-
 tableFooter();
-
-
