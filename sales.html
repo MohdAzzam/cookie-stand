@@ -12,11 +12,26 @@
         <nav></nav>
     </header>
     <main> 
-        <a href="index.html">Back To Home</a>
+        <form id="newStore">
+            <fieldset>
+            <legend>Adding New Store</legend>
+                <label for="name">Name</label>
+                <input type="text" name="name"required  id="storename">
+                <label for="minCustomer">Minumem Customer</label>
+                <input type="number"required  name="minCustomer" id="minCustomer">
+                <label for="maxCustomer">Max Customer</label>
+                <input type="number" required name="maxCustomer" id="maxCustomer">
+                <label for="avg">Avarege</label>
+                <input type="text" required  name="avarege" id="avarege">
+                <input type="submit" value="Add Store">
+                
+            </fieldset>
+        </form>
         
         <div id="cookiesShop">
             
         </div>
+        <center><a href="index.html">Back To Home</a></center>
 
     </main>
     <footer></footer>
