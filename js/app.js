@@ -3,11 +3,14 @@
 let workingHour = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 let tableEl = document.createElement('table');
 let totalArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let arr = [];
 function BranchShop(shopName, minCustomer, maxCustomer, averageCookies) {
   this.name = shopName;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.averageCookies = averageCookies;
+  arr.push(this);
+  // console.log('array from ', arr);
 }
 BranchShop.prototype.customerPerHour = function () {
   let hourlyCutomer = [];
@@ -63,10 +66,11 @@ let tableHeader = function () {
 };
 let tableFooter = function () {
   let divEl = document.getElementById('cookiesShop');
-  tableEl.className = 'table';
+  tableEl.setAttribute('id','table');
   divEl.append(tableEl);
   let tableRow = document.createElement('tr');
   tableEl.appendChild(tableRow);
+  tableRow.setAttribute('id','total');
   let tableHead = document.createElement('th');
   tableRow.appendChild(tableHead);
   tableHead.textContent = 'Totals';
@@ -87,19 +91,45 @@ let tableFooter = function () {
 
 
 
-tableHeader();
 
 let seattle = new BranchShop('Seattle', 23, 65, 6.3);
-seattle.render();
-//  seattle.tableHeader();
 let tokyo = new BranchShop('Tokyo', 3, 24, 1.2);
-tokyo.render();
 let dubai = new BranchShop('Dubai', 11, 38, 3.7);
-dubai.render();
-
 let paris = new BranchShop('Paris', 20, 38, 2.3);
-paris.render();
-
 let lima = new BranchShop('Lima', 2, 16, 4.6);
-lima.render();
+
+
+
+const formStore = document.getElementById('newStore');
+formStore.addEventListener('submit', newStore);
+
+function newStore(event) {
+  event.preventDefault();
+  let branchName = event.target.storename.value;
+  let minCustomer = parseInt(event.target.minCustomer.value);
+  let maxCustomer = parseInt(event.target.maxCustomer.value);
+  if(minCustomer>maxCustomer){
+    alert('Min Number should be less than the Max Number ');
+  }
+  let avareg = parseFloat(event.target.avarege.value);
+  let newbranch = new BranchShop(branchName, minCustomer, maxCustomer, avareg);
+  newbranch.render();
+  let table= document.getElementById('table');
+  let tableTotal  =document.getElementById('total');
+  console.log(tableTotal);
+  table.removeChild(tableTotal);
+  tableFooter();
+
+}
+
+for (let i = 0; i < arr.length; i++) {
+
+  arr[i].render();
+}
+
 tableFooter();
+
+
+
+
+
